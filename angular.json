@@ -72,7 +72,8 @@
             },
             "development": {
               "browserTarget": "news-apps:build:development"
-            }
+            },
+            "options":{ "proxyConfig": "src/proxy.conf.json"}
           },
           "defaultConfiguration": "development"
         },

@@ -1,0 +1,8 @@
+{
+    "/api/*": {
+        "target": "https://api.mediastack.com/v1/news",
+        "secure": true,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+}

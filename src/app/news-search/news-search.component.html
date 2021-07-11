@@ -1,0 +1,26 @@
+<div>
+  <span>Search by : </span>
+  <label *ngFor="let item of searchType">
+    <input
+      type="radio"
+      id="txt"
+      name="Category"
+      [value]="item"
+      [(ngModel)]="search.searchType"
+    />
+    <b>{{item | uppercase}}</b>
+  </label>
+  <br />
+  <div *ngIf="search.searchType === 'Text'">
+    <label for="name">Search : </label>
+
+    <input id="name" [(ngModel)]="search.keyword" placeholder="name" />
+  </div>
+  <div *ngIf="search.searchType === 'Category'">
+    <span>Category: </span>
+    <select [(ngModel)]="search.categories">
+      <option *ngFor="let item of categories" [value]="item">{{ item }}</option>
+    </select>
+  </div>
+  <button type="button" (click)="onSearch()">Search</button>
+</div>

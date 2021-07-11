@@ -1,0 +1,12 @@
+<app-news-search (searchClick) ="onSearch($event)"></app-news-search>
+<div>
+  <ul>
+    <li *ngFor="let news of filteredResults">
+      <div>
+        <h1>{{ news.title | uppercase }}</h1>
+        <span>Date:</span><i>{{ news.publishedAt }}</i>
+        <p>{{ news.description}}</p>
+      </div>
+    </li>
+  </ul>
+</div>
